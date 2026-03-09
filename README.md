@@ -40,11 +40,11 @@ Password: admin123
 
 🏗️ Architectural Decisions & Challenges
 
-1. Secure Authentication Flow
+1. Secure Authentication Flow:
 While a Password Reset flow was planned, it was intentionally omitted in this version to avoid utilizing insecure mock SMTP protocols in a live environment. In a production-scale deployment, this would be implemented via AWS SES or SendGrid with signed JWT tokens for secure verification.
 
-2. Mock Payment Integration
+2. Mock Payment Integration:
 To keep the project lightweight and accessible for portfolio review, I implemented a Mock Payment Gateway. This allows me to demonstrate the logic behind the "Premium" state—such as triggering watermark removal and PDF encryption—without the financial overhead of a real merchant account.
 
-4. Monorepo Deployment
+4. Monorepo Deployment:
 The project is organized as a monorepo. I configured custom build pipelines for both Vercel (Frontend) and Render (Backend) to ensure seamless communication while maintaining independent scalability.
