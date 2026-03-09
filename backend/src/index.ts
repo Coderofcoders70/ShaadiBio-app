@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
@@ -7,10 +8,22 @@ import uploadRoutes from './routes/uploadRoutes.js';
 import paymentRoutes from './routes/paymentRoutes.js'
 import bioDataRoutes from './routes/bioDataRoutes.js';
 
+dotenv.config();
+
 const app = express();
 
+app.use(cors({
+
+  origin: [
+    'http://localhost:5173', 
+    'https://shaadi-bio-frontend.vercel.app' 
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 // Middleware
-app.use(cors());
 app.use(express.json());
 
 // Connect Database
