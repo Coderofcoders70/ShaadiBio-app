@@ -16,7 +16,7 @@ app.use(cors({
 
   origin: [
     'http://localhost:5173', 
-    'https://shaadi-bio-frontend.vercel.app' 
+    'https://shaadi-bio-app-o7dl.vercel.app' 
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
