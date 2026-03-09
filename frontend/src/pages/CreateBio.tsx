@@ -107,7 +107,7 @@ const CreateBio = () => {
   //   }
   // };
 
-  const onCropComplete = (activeArea: any, accomplishedAreaPixels: any) => {
+  const onCropComplete = (_activeArea: any, accomplishedAreaPixels: any) => {
     setCroppedAreaPixels(accomplishedAreaPixels);
   };
 
@@ -193,7 +193,7 @@ const CreateBio = () => {
           <div className={`w-full lg:w-1/2 bg-white p-4 md:p-8 rounded-2xl shadow-lg border border-gray-100 ${activeTab === 'edit' ? 'block' : 'hidden lg:block'}`}>
 
             {/* Step Indicator */}
-            <div className="flex items-center justify-between mb-10 px-1 relative">
+            <div className="flex items-center justify-between mb-10 px-2 relative">
               {[1, 2, 3, 4, 5].map((s) => (
                 <div key={s} className="flex items-center justify-between mb-10 px-1 relative">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all ${step >= s ? 'bg-pink-600 text-white' : 'bg-gray-200 text-gray-500'}`}>

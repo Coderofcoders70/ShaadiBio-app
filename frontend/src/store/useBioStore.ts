@@ -17,7 +17,7 @@ interface BioState {
 }
 
 const initialState: BioData = {
-  personal: { fullName: '', gender: '', dob: '', age: 0, height: '', religion: '', caste: '', motherTongue: '', maritalStatus: '', nationality: '', phone: '', email:'' },
+  personal: { fullName: '', gender: '', dob: '', age: 0, height: '', religion: '', caste: '', motherTongue: '', maritalStatus: '', nationality: '', phone: '', email: '' },
   family: { fatherName: '', fatherOccupation: '', motherName: '', motherOccupation: '', siblings: '', familyType: '', nativePlace: '' },
   education: { education: '', collegeName: '', profession: '', companyName: '', annualIncome: '' },
   privacy: { showIncome: true, showContact: true, showEmail: true },
@@ -26,6 +26,8 @@ const initialState: BioData = {
   language: 'en',
   profilePhoto: '',
   pdfPassword: '',
+  themeColor: '#db2777',
+  fontStyle: 'font-sans'
 };
 
 export const useBioStore = create<BioState>((set) => ({
