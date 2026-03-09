@@ -24,11 +24,11 @@ Integrations:
 
 Value First Guest Flow: Guests can use the full editor immediately; registration is only required to download or save progress, maximizing user engagement.
 
-Real-time Preview: A live-updating A4 template preview with dynamic template switching (Modern vs. Traditional).
+1. Real-time Preview: A live-updating A4 template preview with dynamic template switching (Modern vs. Traditional).
 
-Image Processing Engine: Built-in cropper ensuring all profile photos are perfectly sized at $500 \times 500$px for uniform layouts.
+2. Image Processing Engine: Built-in cropper ensuring all profile photos are perfectly sized at $500 \times 500$px for uniform layouts.
 
-Premium Ecosystem: Mock payment flow that unlocks watermark removal and PDF password protection ($jsPDF$ encryption).
+3. Premium Ecosystem: Mock payment flow that unlocks watermark removal and PDF password protection ($jsPDF$ encryption).
 
 🔐 Admin Access
 
@@ -41,9 +41,10 @@ Password: admin123
 🏗️ Architectural Decisions & Challenges
 
 1. Secure Authentication Flow
-
 While a Password Reset flow was planned, it was intentionally omitted in this version to avoid utilizing insecure mock SMTP protocols in a live environment. In a production-scale deployment, this would be implemented via AWS SES or SendGrid with signed JWT tokens for secure verification.
 
-2. Mock Payment IntegrationTo keep the project lightweight and accessible for portfolio review, I implemented a Mock Payment Gateway. This allows me to demonstrate the logic behind the "Premium" state—such as triggering watermark removal and PDF encryption—without the financial overhead of a real merchant account.
+2. Mock Payment Integration
+To keep the project lightweight and accessible for portfolio review, I implemented a Mock Payment Gateway. This allows me to demonstrate the logic behind the "Premium" state—such as triggering watermark removal and PDF encryption—without the financial overhead of a real merchant account.
 
-3. Monorepo DeploymentThe project is organized as a monorepo. I configured custom build pipelines for both Vercel (Frontend) and Render (Backend) to ensure seamless communication while maintaining independent scalability.
+4. Monorepo Deployment
+The project is organized as a monorepo. I configured custom build pipelines for both Vercel (Frontend) and Render (Backend) to ensure seamless communication while maintaining independent scalability.
