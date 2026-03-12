@@ -50,7 +50,7 @@ const BioDataTemplate = ({ data }: Props) => {
       {/* Content wrapper with relative positioning and z-index to stay above watermark */}
       <div className="relative z-10">
         {/* Header Section */}
-        <div className="text-center mb-10 text-left">
+        <div className="text-center mb-10">
           {data.profilePhoto ? (
             <img
               src={data.profilePhoto}
