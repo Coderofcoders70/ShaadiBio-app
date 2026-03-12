@@ -46,7 +46,7 @@ const CreateBio = () => {
       };
       fetchBioToEdit();
     } else {
-      resetBioData(); // Clear form for new creation
+      resetBioData(); 
     }
   }, [id, updateBioData, setProfilePhoto, resetBioData]);
 
@@ -134,11 +134,11 @@ const CreateBio = () => {
       formData.append('image', file);
 
       const { data } = await api.post('/upload', formData);
-      setProfilePhoto(data.url); // Save to Zustand store
+      setProfilePhoto(data.url); 
       setShowCropper(false);
     } catch (err) {
       console.error(err);
-      alert("Cropping/Upload failed");
+      alert("Cropping/Upload failed! Aren't you signed in?");
     } finally {
       setUploading(false);
     }
