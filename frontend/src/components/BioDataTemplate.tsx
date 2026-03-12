@@ -63,7 +63,7 @@ const BioDataTemplate = ({ data }: Props) => {
             </div>
           )}
           <h1
-            className="text-3xl font-bold uppercase tracking-widest"
+            className="text-3xl text-center font-bold uppercase tracking-widest"
             style={{ color: primaryColor }}
           >
             {data.personal.fullName || (lang === 'en' ? "YOUR NAME" : "आपका नाम")}
